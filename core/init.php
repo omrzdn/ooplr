@@ -1,21 +1,20 @@
 <?php
 
-try {
-
-  $pdo = new PDO('mysql:host=localhost;dbname=lrApp','root','');
-
-} catch (PDOException $e) {
-
-  die($e->getmessage());
-}
 
 $GLOBALS['config'] = array(
+
+    'mysql'     => array(
+      'host' => 'localhost' ,
+      'username' => 'root',
+      'password' => '',
+      'dbname' => 'lrApp'
+    ),
 
     'remember' => array(
         'cookie_name'   => 'hash',
         'cookie_expiry' => 604800
     ),
-    'session' =>  array(
+    'session'  =>  array(
       'session_name' => 'user'
     )
   );
